@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI-Powered Task Manager — Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#6ee7b7;
+      --accent-2:#7dd3fc;
+      --muted:#6c757d;
+    }
+     /* button {
+  background: var(--accent);
+  color: white;
+}
+
+button.secondary {
+  background: var(--accent-2);
+}
+
+p.note {
+  color: var(--muted);
+} */
+
+    body{background-color:#0f1724;color:#e6eef6;}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#012;}
+    .cta-btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#012;font-weight:700;border:none;border-radius:8px;}
+    .feature-card{transition:transform .4s ease;cursor:pointer;}
+    .feature-card:hover{transform:translateY(-10px) scale(1.02);}
+    .reveal{opacity:0;transform:translateY(18px);transition:all .5s ease-in-out;}
+    .reveal.visible{opacity:1;transform:none;}
+    .dot-btn{width:12px;height:12px;border-radius:50%;background:#6c757d;border:none;}
+    .dot-btn.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));}
+    .hero-section{
+       background: url("./imagess/task.jpg") no-repeat center top;
+  background-size: cover;   /* Makes sure image covers entire section */
+  min-height: 90vh;         /* Full viewport height minus navbar */
+  padding-top: 100px; 
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+    }
+    .hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 149%;
+  background: rgba(15, 23, 36, 0.6); /* dark overlay with 60% opacity */
+  border-radius: 5px;
+}
+
+.hero-section > div {
+  position: relative; /* keeps text above overlay */
+  z-index: 1;
+}
+/* Start invisible */
+/* .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.3s; /* optional: delay for nice stagger */
+/* } */
+
+/* Keyframes define the animation */
+/* @keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */ 
+
+  </style>
+</head>
+<body>
+  <div class="container py-3">
+    <!-- Header -->
+    <header class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+      <div class="d-flex align-items-center gap-2">
+        <div class="logo">AI</div>
+        <div>
+          <strong>Start the day</strong><br>
+          <small class="text-secondary">AI-Powered Task Manager</small>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="nav-link text-secondary" href="#features">Features</a>
+        <a class="nav-link text-secondary" href="#testimonials">Testimonials</a>
+        <a class="btn cta-btn ms-2" href="#">Add task</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="row align-items-center mb-5 d-flex hero-section ">
+      <div class="col-md-6 margin-left: 32px;">
+        <h1 class="reveal text-black">Focus on Time — lets organize your day.</h1>
+        <p class="lead fw-bolder reveal">Team-synced workflows so you finish the right work at the right time.</p>
+        <div class="d-flex gap-2 mt-3 reveal">
+          <button class="btn cta-btn">Trail</button>
+          <button class="btn btn-outline-secondary text-black">Choose plan</button>
+        </div>
+        <!-- <div class="position-absolute start-50 translate-end-y margin-bottom-5"><img src="./imagess/task.png" alt="" class="img-fluid" style="max-width:500px";></div> -->
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="mb-5">
+      <h2 class="mb-4 reveal">Key Features</h2>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="card feature-card bg-dark text-light p-3">
+            <div class="fw-bold">⚡ Smart Prioritization</div>
+            <p class="text-secondary">Tasks ranked by impact, urgency, and working patterns.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card feature-card bg-dark text-light p-3">
+            <div class="fw-bold">🤝 Collaborative Boards</div>
+            <p class="text-secondary">Share tasks with teammates and auto-sync calendars.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card feature-card bg-dark text-light p-3">
+            <div class="fw-bold">🔒 Privacy-first</div>
+            <p class="text-secondary">Local processing with optional cloud sync.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+     <section id="features" class="mb-5">
+      <!-- <h2 class="mb-4 reveal">Key Features</h2> -->
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="card feature-card bg-dark text-light p-3">
+            <div class="fw-bold">🔔 Context-aware Reminders</div>
+            <p class="text-secondary">Location, time, user activity, and device state to deliver timely and relevant reminders.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card feature-card bg-dark text-light p-3">
+            <div class="fw-bold">🕒 Automated Routines</div>
+            <p class="text-secondary">Perform tasks automatically, reducing manual effort and increasing efficiency.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card feature-card bg-dark text-light p-3">
+            <div class="fw-bold">📊 Productivity Insights</div>
+            <p class="text-secondary">Systematic evaluation of how effectively resources, particularly human resources, are used in an organization.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="mb-5">
+      <h2 class="mb-4 reveal">What Teams Say</h2>
+      <div class="carousel slide reveal" id="testimonialCarousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center">
+            <p class="text-secondary">“Taskly halved our planning time — the AI suggestions are eerily accurate.”</p>
+            <small>- Amrita K.</small>
+          </div>
+          <div class="carousel-item text-center">
+            <p class="text-secondary">“Seamless sync across devices — automation has changed our sprint retro.”</p>
+            <small>- Raj P.</small>
+          </div>
+          <div class="carousel-item text-center">
+            <p class="text-secondary">“Love the focus suggestions — less noise, more meaningful work.”</p>
+            <small>- Sofia M.</small>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <button class="dot-btn me-2" type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+          <button class="dot-btn me-2" type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+          <button class="dot-btn" type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="d-flex justify-content-between py-3 border-top border-secondary">
+      <div>
+        <strong>Taskly</strong><br>
+        <small class="text-secondary">AI-Powered Task Manager</small>
+      </div>
+      <small class="text-secondary">© 2025 AI-Powered Task Manager — Landing Page</small>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script>
+    // Reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e=>{
+        if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
+      });
+    },{threshold:0.1});
+    reveals.forEach(r=>obs.observe(r));
+  </script>  -->
+   <script>
+  function revealOnScroll() {
+    let reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach(function(e) {
+      // Get element's position relative to viewport
+      let windowHeight = window.innerHeight;
+      let elementTop = e.getBoundingClientRect().top;
+
+      // How far before element enters view (150px earlier)
+      let revealPoint = 150;
+
+      if (elementTop < windowHeight - revealPoint) {
+        e.classList.add("visible");
+      } else {
+        e.classList.remove("visible"); // optional (animation repeats if you scroll up)
+      }
+    });
+  }
+
+  // Run on scroll
+  window.addEventListener("scroll", revealOnScroll);
+
+  // Run once on page load
+  revealOnScroll();
+ </script>
+
+</body>
+</html>
